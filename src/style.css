@@ -60,11 +60,11 @@ body {
 .add-items input {
   border: 1px solid #000;
   border-radius: 2px;
-  width: 93%;
+  width: 95%;
   height: 24px;
   font-style: italic;
   font-size: 16px;
-  padding: 6px 0;
+  padding: 6px;
 }
 
 /* Added Item Style */
