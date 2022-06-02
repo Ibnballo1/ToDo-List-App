@@ -70,6 +70,12 @@ body {
 /* Added Item Style*/
 .added-items {
   border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+.each-task {
+  display: flex;
 }
 
 .completed {
