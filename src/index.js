@@ -27,7 +27,7 @@ const populateTask = todoTasks.forEach((todos)=> {
     const eachTask = `
     <div id="each-task" class="item-box-${counter + 1} each-task">
         <div class="inputs">
-            <input type="checkbox" id="mark" name="mark" class='check${index} ${completed}' value="Check">
+            <input type="checkbox" id="mark" name="mark" class='check${index} ${completed} mark' value="Check">
             <label for="mark"> ${description} </label>
         </div>
         <button type="button" id="del"><i class="fas fa-trash-alt"></i></button>

@@ -23,11 +23,9 @@ body {
 
 .section {
   width: 50%;
-  box-shadow: -4px 6px rgb(34, 33, 33);
 }
 
 .container {
-  border: 2px solid blue;
   border-radius: 8px;
   padding: 4px;
   background-color: #fff;
@@ -43,7 +41,8 @@ body {
 }
 
 .todo-today button,
-.add-items button {
+.add-items button,
+.each-task button {
   border: none;
   background-color: #fff;
   color: grey;
@@ -60,22 +59,37 @@ body {
 .add-items input {
   border: 1px solid #000;
   border-radius: 2px;
-  width: 94%;
+  width: 93%;
   height: 24px;
   font-style: italic;
   font-size: 16px;
-  padding: 6px;
+  padding: 6px 0;
 }
 
 /* Added Item Style*/
 .added-items {
-  border: 2px solid green;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .each-task {
+  padding: 12px 10px;
   display: flex;
+  justify-content: space-between;
+}
+
+.inputs {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+input[type="checkbox"] {
+  border: 3px solid gray;
+}
+
+.each-task button {
+  font-size: 18px;
 }
 
 .completed {
