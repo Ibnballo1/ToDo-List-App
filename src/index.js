@@ -3,7 +3,7 @@ import './style.css';
 const addedItems = document.getElementById('added-items');
 let counter = 0;
 
-let todoTasks = [
+const todoTasks = [
   {
     description: 'wash the dishes',
     index: 1,
