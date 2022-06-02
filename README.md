@@ -11,7 +11,13 @@ In this project I built a simple todo list structure, which will be used as a st
 To get a local copy up and running, follow these simple steps:
 ## Usage
 First copy this repo and clone it on your machine using this [link](git@github.com:Ibnballo1/ToDo-List-App.git).
-Then cd into webpack.
+Then cd into ToDo-List-App.
+
+## Install
+Use `npm install --save ToDo-List` to install.
+
+## Start Server
+Use `npm start` to start the server
 
 # Authors
 :adult: Abdullateef Bello
