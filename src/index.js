@@ -1,6 +1,7 @@
 import './style.css';
 
-const addedItems = 
+const addedItems = document.getElementById('added-items');
+let counter = 0;
 
 let todoTasks = [
     {
@@ -11,7 +12,7 @@ let todoTasks = [
     {
         description: 'Complete Todo List Project',
         index: 2,
-        completed: true,
+        completed: false,
     },
     {
         description: 'Code Daily',
@@ -21,9 +22,18 @@ let todoTasks = [
 ];
 
 // Function to iterate over the task array
-const eachTask = todoTasks.forEach(()=> {
-    const div = document.createElement('div');
-    console.log(div)
+const populateTask = todoTasks.forEach((todos)=> {
+    const {description, completed, index} = todos;
+    const eachTask = `
+    <div id="each-task" class="item-box-${counter + 1}">
+        <input type="checkbox" id="mark" name="mark" class='check${index} ${completed}' value="Check">
+        <label for="mark"> ${description} </label>
+        <i class="fas fa-trash-alt"></i>
+    </div>
+`;
+    console.log(eachTask);
+    addedItems.insertAdjacentHTML('beforeend', eachTask);
+    counter++;
 });
 
-eachTask();
+populateTask();
