@@ -35,7 +35,8 @@ body {
 
 .todo-today,
 .add-items,
-.completed {
+.completed,
+.added-items {
   display: flex;justify-content: space-between;
   padding: 16px 10px;
   background-color: #fff;
@@ -64,6 +65,11 @@ body {
   font-style: italic;
   font-size: 16px;
   padding: 6px;
+}
+
+/* Added Item Style*/
+.added-items {
+  border: 2px solid green;
 }
 
 .completed {
