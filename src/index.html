@@ -7,14 +7,22 @@
     <script src="https://kit.fontawesome.com/210152c720.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="container">
+    <main class="main">
         <h1 class="title">ToDo List App</h1>
-        <section>
-            <div>
-                <h2 class="sub-title">Today's To Do</h2>
-                <button id="refresh" type="button"><i class="fas fa-sync"></i></button>
+        <section class="section">
+            <div class="container">
+                <div class="todo-today">
+                    <h2 class="sub-title">Today's To Do</h2>
+                    <button id="refresh" type="button"><i class="fas fa-sync"></i></button>
+                </div>
+                <div class="add-items">
+                    <input type="text" class="add-list" placeholder="Add to your list">
+                    <button id="add" type="button"><i class="fas fa-pen"></i></button>
+                </div>
+                <div class="completed">
+                    <p class="clear-all">Clear all completed</p>
+                </div>
             </div>
-            <input type="text" class="add-list" placeholder="Add to your list">
         </section>
     </main>
 </body>
