@@ -1,5 +1,5 @@
-# Webpack Project
-In this project I built a simple yet powerful webpack boilerplate, which will be used as a starting point for other projects.
+# ToDo List Structure Project
+In this project I built a simple todo list structure, which will be used as a starting point for other projects.
 
 # Built With
 * Major Languages
@@ -10,7 +10,7 @@ In this project I built a simple yet powerful webpack boilerplate, which will be
 # Getting Started
 To get a local copy up and running, follow these simple steps:
 ## Usage
-First copy this repo and clone it on your machine using this [link](git@github.com:Ibnballo1/webpack.git).
+First copy this repo and clone it on your machine using this [link](git@github.com:Ibnballo1/ToDo-List-App.git).
 Then cd into webpack.
 
 # Authors
@@ -31,4 +31,4 @@ Kindly give a :hearts: if you like this.
 - I expressed my gratitude for everyone.
 
 # License
-This project is [MIT](C:\Users\J T COMPUTER\Microverse-April18\Module2\week2\Day2\webpack\MIT.md).
+This project is [MIT](C:\Users\J T COMPUTER\Microverse-April18\Module2\week2\ToDo-List-App\MIT.md).
