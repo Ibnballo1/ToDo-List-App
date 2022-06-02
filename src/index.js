@@ -4,7 +4,7 @@ const addedItems = document.getElementById('added-items');
 let counter = 0;
 
 const todoTasks = [
-  {
+  /*{
     description: 'wash the dishes',
     index: 1,
     completed: false,
@@ -28,11 +28,11 @@ const todoTasks = [
     description: 'Work',
     index: 4,
     completed: false,
-  },
+  },*/
 ];
 
 // Function to iterate over the task array
-const populateTask = todoTasks.forEach((todos) => {
+/*const populateTask = todoTasks.forEach((todos) => {
   const { index } = todos;
   const eachTask = `
     <div id="each-task" class="item-box-${counter + 1} each-task">
@@ -48,4 +48,4 @@ const populateTask = todoTasks.forEach((todos) => {
   counter += 1;
 });
 
-populateTask();
+populateTask();*/
