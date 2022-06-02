@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -35,7 +35,8 @@ body {
 .add-items,
 .completed,
 .added-items {
-  display: flex;justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   padding: 16px 10px;
   background-color: #fff;
 }
@@ -66,7 +67,7 @@ body {
   padding: 6px 0;
 }
 
-/* Added Item Style*/
+/* Added Item Style */
 .added-items {
   display: flex;
   flex-direction: column;
@@ -100,7 +101,7 @@ input[type="checkbox"] {
 }
 
 .clear-all {
-  font-family: 'Poppins', sans;
+  font-family: 'Poppins', sans-serif;
 }
 
 .clear-all:hover {
