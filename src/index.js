@@ -4,7 +4,7 @@ import './style.css';
 const addedItems = document.getElementById('added-items');
 export let counter = 0;
 
-const todoTasks = [];
+export const todoTasks = [];
 
 // Function to iterate over the task array
 /*const populateTask = todoTasks.forEach((todos) => {
@@ -25,4 +25,4 @@ const todoTasks = [];
 
 populateTask();*/
 
-todoTasks.push(inputs.value);
+//todoTasks.push(inputs.value);
