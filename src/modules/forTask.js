@@ -1,8 +1,10 @@
 import { counter } from "..";
 
 // Variables for all elemnts
+const form = document.getElementById('form-add-items');
 const inputs = document.getElementById('to-add');
 const inputBtn = document.getElementById('add');
+const addedItemDiv = document.getElementById('added-items');
 
 // Create object for task to be added to array
 class MyTasks{
@@ -13,8 +15,9 @@ class MyTasks{
     }
 };
 
-inputs.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' && inputs.value !== '') {
+function addTasks() {
+    if (inputs.value !== '') {
+        console.log('Button was clicked');
         const inputVal = inputs.value;
         const task = new MyTasks(inputVal, 1, false);
         const {index, completed} = task;
@@ -46,8 +49,11 @@ inputs.addEventListener('keypress', (e) => {
         innerDiv.appendChild(labelDescription);
         div.appendChild(innerDiv);
         div.appendChild(removeBtn);
-        console.log(div);
+        addedItemDiv.appendChild(div);
     }
-});
+}
+
+form.addEventListener('submit', addTasks);
+inputBtn.addEventListener('click', addTasks);
 
 export default inputs;
