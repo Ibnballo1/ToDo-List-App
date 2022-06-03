@@ -1,35 +1,10 @@
+import inputs from './modules/forTask';
 import './style.css';
 
 const addedItems = document.getElementById('added-items');
-let counter = 0;
+export let counter = 0;
 
-const todoTasks = [
-  /*{
-    description: 'wash the dishes',
-    index: 1,
-    completed: false,
-  },
-  {
-    description: 'Complete Todo List Project',
-    index: 3,
-    completed: false,
-  },
-  {
-    description: 'Code Daily',
-    index: 2,
-    completed: false,
-  },
-  {
-    description: 'Exercise',
-    index: 5,
-    completed: false,
-  },
-  {
-    description: 'Work',
-    index: 4,
-    completed: false,
-  },*/
-];
+const todoTasks = [];
 
 // Function to iterate over the task array
 /*const populateTask = todoTasks.forEach((todos) => {
@@ -49,3 +24,5 @@ const todoTasks = [
 });
 
 populateTask();*/
+
+todoTasks.push(inputs.value);
