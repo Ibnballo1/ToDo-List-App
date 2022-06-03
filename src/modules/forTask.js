@@ -1,5 +1,6 @@
 import { counter } from "..";
 import { todoTasks } from "..";
+import removeTask from "./remove";
 
 // Variables for all elemnts
 const form = document.getElementById('form-add-items');
@@ -54,7 +55,7 @@ function addTasks() {
         console.log(todoTasks);
         addedItemDiv.appendChild(div);
     
-        
+        removeTask();
         /*todoTasks.forEach(() => {
             rmvEachTask[index].addEventListener('click', () => console.log(rmvEachTask))
         }, index);*/
