@@ -43,7 +43,7 @@ function addTasks() {
         labelDescription.innerHTML = `${task.description}`;
         removeBtn.setAttribute('type', 'button');
         removeBtn.setAttribute('id', 'del');
-        removeBtn.classList.add(`rmvBtn${counter + 1}`)
+        removeBtn.classList.add('rmvBtn')
         trash.classList.add(`fas`, `fa-trash-alt`);
         removeBtn.appendChild(trash);
 
@@ -51,14 +51,12 @@ function addTasks() {
         innerDiv.appendChild(labelDescription);
         div.appendChild(innerDiv);
         div.appendChild(removeBtn);
-        todoTasks.push(div)
-        console.log(todoTasks);
+        todoTasks.push(div);
         addedItemDiv.appendChild(div);
     
         removeTask();
-        /*todoTasks.forEach(() => {
-            rmvEachTask[index].addEventListener('click', () => console.log(rmvEachTask))
-        }, index);*/
+        
+        // Delete all
     }
 }
 
