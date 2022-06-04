@@ -74,7 +74,6 @@ class MyTasks {
     this.removeHighlight();
     const input = document.getElementById(`input${task.id}`);
     const removeButton = document.getElementById(`button${task.id}`);
-    const drag = document.getElementById(`drag${task.id}`);
     input.classList.add('highlight');
     removeButton.classList.remove('hidden');
   };
