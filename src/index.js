@@ -21,5 +21,36 @@ if (getStorage) {
 }
 
 const eachList = new List(dataCount);
+eachList.addedItems = eachList.getData();
+
+if (localStorage.getItem('listName')) {
+  listTitle.value = localStorage.getItem('listName');
+};
+
+listTitle.addEventListener('input', () => {
+  eachList.setListName(listTitle.value);
+});
+
+// Populating the data
+for (let i = 0; i < eachList.addedItems.length; i += 1) {
+  const newTask = eachList.addedItems[i];
+  eachList.addLiTag(newTask);
+  const description = document.getElementById(`input${newTask.id}`);
+  const checkbox = document.getElementById(`checkbox${newTask.id}`);
+  const removeButton = document.getElementById(`button${newTask.id}`);
+  toAdd.value = '';
+
+  // event listeners:
+  removeButton.addEventListener('click', () => {
+    eachList.removeEachTask(newTask);
+  });
+  description.addEventListener('input', () => {
+    eachList.updateDescription(description.value, newTask);
+  });
+  checkbox.addEventListener('change', () => {
+      list.updateCheckbox(newTask);
+  });
+}
+  
 
 
