@@ -1,7 +1,7 @@
-/*import { todoTasks } from "..";
+import { todoTasks } from "..";
 // local storage
 
-const getStorage = localStorage.getItem('todoTasks');
+/*const getStorage = localStorage.getItem('todoTasks');
 
 // Checking if data are in local storage and getting them
 function getDatas() {
@@ -24,6 +24,7 @@ todoTasks.addEventListener('load', () => {
 
 const getDatas = () => {
   if (localStorage.getItem('task') !== null) {
+    console.log("in the GetItem")
       return (JSON.parse(localStorage.getItem('task')));
   }
   return{};

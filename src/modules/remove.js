@@ -7,7 +7,7 @@ function removeTask() {
     const rmvEachTask = document.getElementsByClassName('rmvBtn');
     for (let i = 0; i < todoTasks.length; i++) {
         todoTasks[i].querySelector('.rmvBtn').addEventListener('click', () => {
-            todoTasks[i].remove().getDatas();
+            todoTasks[i].remove();
         });
     }
 };

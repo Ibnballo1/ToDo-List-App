@@ -19,8 +19,6 @@ export const addedItemDiv = document.getElementById('added-items');
     }
 };
 
-getDatas();
-
 form.addEventListener('submit', addTasks);
 inputBtn.addEventListener('click', addTasks);
 

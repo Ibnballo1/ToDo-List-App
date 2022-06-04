@@ -4,6 +4,7 @@ import { counter } from "..";
 import { todoTasks } from "..";
 import { addedItemDiv } from "./forTask";
 import removeTask from "./remove";
+import getDatas from "./local-storage";
 
 function addTasks() {
     if (inputs.value !== '') {
@@ -45,12 +46,22 @@ function addTasks() {
         removeTask();
 
         // local storage
-        const arrObj = Object.assign({}, todoTasks);
-        console.log(arrObj);
 
         // set the inputs
+        //const newDiv = document.createElement('div');
+        const storeData = {}
+        /*    description: `${task.description}`,
+            check: `${checkInput.type}`,
+            removetasks: `${removeBtn.appendChild(trash)}`,
+        };*/
+
         function setInputs() {
-            localStorage.setItem('task', JSON.stringify(arrObj));
+            todoTasks.forEach((element) => {
+                storeData.task = element;
+            });
+            console.log(todoTasks);
+            
+            localStorage.setItem('task', JSON.stringify(storeData));
         }
         setInputs();
         //console.log(localStorage.setItem('task', JSON.stringify(arrObj)));
