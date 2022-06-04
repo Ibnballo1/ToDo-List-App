@@ -1,13 +1,13 @@
 import './style.css';
-import MyTasks from './modules/forTask';
+import MyTasks from './modules/forTask.js';
 
 const formAddItems = document.getElementById('formAddItems');
 const addDescription = document.getElementById('toAdd');
-const listTitle = document.getElementById("listTitle");
+const listTitle = document.getElementById('listTitle');
 let dataCount = 0;
 const getStorage = localStorage.getItem('dataCount');
 if (getStorage) {
-    dataCount = getStorage;
+  dataCount = getStorage;
 }
 
 const eachList = new MyTasks(dataCount);
@@ -15,7 +15,7 @@ eachList.addedItems = eachList.getData();
 
 if (localStorage.getItem('listName')) {
   listTitle.value = localStorage.getItem('listName');
-};
+}
 
 listTitle.addEventListener('input', () => {
   eachList.setListName(listTitle.value);
@@ -38,7 +38,7 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
     eachList.updateDescription(description.value, newTask);
   });
   checkbox.addEventListener('change', () => {
-      list.updateCheckbox(newTask);
+    eachList.updateCheckbox(newTask);
   });
 }
 

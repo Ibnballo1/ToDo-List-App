@@ -1,8 +1,9 @@
-class MyTasks{
+class MyTasks {
   constructor(taskIndex) {
     this.addedItems = [];
     this.taskIndex = Number(taskIndex);
-  }  
+  }
+  
   formAddItems = (description, index, isCompleted) => {
     const newTask = {
       description: description ?? 'description',
@@ -16,14 +17,14 @@ class MyTasks{
     this.setData();
     return newTask;
   };
-  
+
   addLiTag = (task) => {
     const ul = document.getElementById('addedItems');
     const li = document.createElement('li');
     const checkbox = document.createElement('INPUT');
     const input = document.createElement('INPUT');
     const button = document.createElement('button');
-    button.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
+    button.innerHTML = `<i class='fa fa-trash' aria-hidden='true'></i>`;
     li.setAttribute('id', `li${task.id}`);
     checkbox.setAttribute('id', `checkbox${task.id}`);
     input.setAttribute('id', `input${task.id}`);
@@ -63,25 +64,25 @@ class MyTasks{
     localStorage.setItem('dataTasks', JSON.stringify(this.addedItems));
     localStorage.setItem('dataCount', this.taskIndex);
   };
-  
+
   getData = () => {
-      const getStoredVal = localStorage.getItem('dataTasks');
-      if (getStoredVal) {
-        return JSON.parse(getStoredVal);
-      }
-      return [];
+    const getStoredVal = localStorage.getItem('dataTasks');
+    if (getStoredVal) {
+      return JSON.parse(getStoredVal);
+    }
+    return [];
   };
-  
+
   getTaskIndex = (id) => {
-      let i = 0;
-      while (this.addedItems[i].id !== id) {
-        i += 1;
-      }
-      return i;
+    let i = 0;
+    while (this.addedItems[i].id !== id) {
+      i += 1;
+    }
+    return i;
   };
-  
+
   setListName = (newTitle) => {
-      localStorage.setItem('listName', newTitle);
+    localStorage.setItem('listName', newTitle);
   };
-}  
+}
 export default MyTasks;
