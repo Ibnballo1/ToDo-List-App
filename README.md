@@ -14,7 +14,7 @@ First copy this repo and clone it on your machine using this [link](git@github.c
 Then cd into ToDo-List-App.
 
 ## Install
-Use `npm install --save ToDo-List` to install.
+Use `npm install` to install.
 
 ## Start Server
 Use `npm start` to start the server
