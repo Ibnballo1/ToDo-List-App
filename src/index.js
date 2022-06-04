@@ -1,17 +1,7 @@
-/*import inputs from './modules/forTask';*/
-import MyTasks from './modules/forTask';
 import './style.css';
-/*import getDatas from './modules/local-storage';
-import addTasks from './modules/addtasks';
-import storeData from './modules/local-storage';
-export let counter = 0;
-export const todoTasks = [];
+import MyTasks from './modules/forTask';
 
-const addedItems = document.getElementById('added-items');
-
-getDatas();*/
-
-const form = document.getElementById('formAddItems');
+const formAddItems = document.getElementById('formAddItems');
 const addDescription = document.getElementById('toAdd');
 const listTitle = document.getElementById("listTitle");
 let dataCount = 0;
@@ -38,7 +28,7 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
   const description = document.getElementById(`input${newTask.id}`);
   const checkbox = document.getElementById(`checkbox${newTask.id}`);
   const removeButton = document.getElementById(`button${newTask.id}`);
-  toAdd.value = '';
+  addDescription.value = '';
 
   // event listeners:
   removeButton.addEventListener('click', () => {
@@ -51,6 +41,22 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
       list.updateCheckbox(newTask);
   });
 }
-  
 
-
+formAddItems.addEventListener('submit', () => {
+  const newTask = eachList.formAddItems(addDescription.value);
+  eachList.addLiTag(eachList.addedItems[eachList.addedItems.length - 1]);
+  const description = document.getElementById(`input${eachList.taskIndex - 1}`);
+  const checkbox = document.getElementById(`checkbox${eachList.taskIndex - 1}`);
+  const removeButton = document.getElementById(`button${eachList.taskIndex - 1}`);
+  addDescription.value = '';
+  // event listeners:
+  removeButton.addEventListener('click', () => {
+    eachList.removeEachTask(newTask);
+  });
+  description.addEventListener('input', () => {
+    eachList.updateDescription(description.value, newTask);
+  });
+  checkbox.addEventListener('change', () => {
+    eachList.updateCheckbox(newTask);
+  });
+});
