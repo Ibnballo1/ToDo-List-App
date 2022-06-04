@@ -62,11 +62,35 @@ export const addedItemDiv = document.getElementById('added-items');*/
         task.description = description;
         this.setData();
     };
+    updateCheckbox = (task) => {
+        task.isCompleted = !task.isCompleted;
+        this.setData();
+    };
+    // local storage
+    setData = () => {
+        localStorage.setItem('dataTasks', JSON.stringify(this.addedItems));
+        localStorage.setItem('dataCount', this.taskIndex);
+    };
     
-
+    getData = () => {
+        const getStorage = localStorage.getItem('dataCount');
+        if (getStorage) {
+          return JSON.parse(getStorage);
+        }
+        return [];
+    };
+    
+    getTaskIndex = (id) => {
+        let i = 0;
+        while (this.addedItems[i].id !== id) {
+          i += 1;
+        }
+        return i;
+    };
+    
+    setListName = (newTitle) => {
+        localStorage.setItem('listName', newTitle);
+    };
 };
 
-form.addEventListener('submit', addTasks);
-inputBtn.addEventListener('click', addTasks);
-
-export default inputs;
+export default MyTasks;
