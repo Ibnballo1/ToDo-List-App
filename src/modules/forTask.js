@@ -22,7 +22,7 @@ class MyTasks{
     const checkbox = document.createElement('INPUT');
     const input = document.createElement('INPUT');
     const button = document.createElement('button');
-    button.innerHTML = 'remove';
+    button.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
     li.setAttribute('id', `li${task.id}`);
     checkbox.setAttribute('id', `checkbox${task.id}`);
     input.setAttribute('id', `input${task.id}`);
@@ -63,8 +63,9 @@ class MyTasks{
   };
   
   getData = () => {
-      if (localStorage.getItem('dataTasks')) {
-        return JSON.parse(localStorage.getItem('dataTasks'));
+      const getStoredVal = localStorage.getItem('dataTasks');
+      if (getStoredVal) {
+        return JSON.parse(getStoredVal);
       }
       return [];
   };
