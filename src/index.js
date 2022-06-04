@@ -30,7 +30,7 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
   const description = document.getElementById(`input${newTask.id}`);
   const checkbox = document.getElementById(`checkbox${newTask.id}`);
   const removeButton = document.getElementById(`button${newTask.id}`);
-  if (newTask.isCompleted) list.checkTask(newTask.id);
+  if (newTask.isCompleted) eachList.checkTask(newTask.id);
 
   // event listeners:
   removeButton.addEventListener('click', () => {
@@ -64,8 +64,26 @@ formAddItems.addEventListener('submit', () => {
   });
   description.addEventListener('input', () => {
     eachList.updateDescription(description.value, newTask);
+  });description.addEventListener('click', () => {
+    eachList.selectTask(newTask);
+  });
+  description.addEventListener('keydown', () => {
+    eachList.selectTask(newTask);
   });
   checkbox.addEventListener('change', () => {
     eachList.updateCheckbox(newTask);
+    eachList.checkTask(newTask.id);
   });
+});
+
+clearTask.addEventListener('click', () => {
+  eachList.addedItems = eachList.addedItems.filter(eachList.clearTask);
+  eachList.setData();
+});
+
+listTitle.addEventListener('click', () => {
+  eachList.removeHighlight();
+});
+addTask.addEventListener('click', () => {
+  eachList.removeHighlight();
 });

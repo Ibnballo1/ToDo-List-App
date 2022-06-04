@@ -52,6 +52,57 @@ class MyTasks {
     this.setData();
   };
 
+  removeDiv = (task) => {
+    const ul = document.getElementById('tasks');
+    const index = this.getTaskIndex(task.id);
+    const li = document.getElementById(`li${task.id}`);
+    ul.removeChild(li);
+    for (let i = index; i < this.tasks.length; i += 1) {
+      this.tasks[i].index -= 1;
+    }
+  };
+
+  clearCompleted = (task) => {
+    if (task.isCompleted === true) {
+      this.removeDiv(task);
+      return false;
+    }
+    return true;
+  };
+
+  highlightTask = (task) => {
+    this.removeHighlight();
+    const input = document.getElementById(`input${task.id}`);
+    const removeButton = document.getElementById(`button${task.id}`);
+    const drag = document.getElementById(`drag${task.id}`);
+    input.classList.add('highlight');
+    drag.classList.add('hidden');
+    removeButton.classList.remove('hidden');
+  };
+
+  removeHighlight = () => {
+    const id = this.findHighlight();
+    if (id >= 0) {
+      const input = document.getElementById(`input${id}`);
+      //const drag = document.getElementById(`drag${id}`);
+      const removeButton = document.getElementById(`button${id}`);
+      input.classList.remove('highlight');
+      //drag.classList.remove('hidden');
+      removeButton.classList.add('hidden');
+    }
+  };
+
+  findHighlight = () => {
+    for (let i = 0; i < this.addedItems.length; i += 1) {
+      const { id } = this.addedItems[i];
+      const input = document.getElementById(`input${id}`);
+      if (input.classList.contains('highlight')) {
+        return id;
+      }
+    }
+    return -1;
+  };
+
   updateDescription = (description, task) => {
     task.description = description;
     this.setData();
@@ -60,6 +111,12 @@ class MyTasks {
   updateCheckbox = (task) => {
     task.isCompleted = !task.isCompleted;
     this.setData();
+  };
+
+  checkTask = (id) => {
+    const description = document.getElementById(`input${id}`);
+    description.toggleAttribute('disabled');
+    description.classList.toggle('done');
   };
 
   // local storage
