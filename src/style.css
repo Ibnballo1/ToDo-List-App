@@ -22,13 +22,7 @@ body {
 }
 
 .section {
-  width: 50%;
-}
-
-.container {
-  border-radius: 8px;
-  padding: 4px;
-  background-color: #fff;
+  width: 65%;
 }
 
 .todo-today,
@@ -43,7 +37,8 @@ body {
 
 .todo-today button,
 .add-items button,
-.each-task button {
+li button,
+.completed button {
   border: none;
   background-color: #fff;
   color: grey;
@@ -57,7 +52,8 @@ body {
   background-color: bisque;
 }
 
-.add-items input {
+.add-items input,
+li input[type='text'] {
   border: 1px solid #000;
   border-radius: 2px;
   width: 95%;
@@ -72,6 +68,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li input[type='text'] {
+  border: none;
+  width: 92%;
+}
+
+li input[type='text']:hover {
+  border: 1px solid #000;
 }
 
 .each-task {

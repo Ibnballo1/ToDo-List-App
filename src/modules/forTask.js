@@ -16,6 +16,7 @@ class MyTasks{
     this.setData();
     return newTask;
   };
+  
   addLiTag = (task) => {
     const ul = document.getElementById('addedItems');
     const li = document.createElement('li');
@@ -34,6 +35,7 @@ class MyTasks{
     li.append(checkbox, input, button);
     ul.append(li);
   };
+
   removeEachTask = (task) => {
     const ul = document.getElementById('addedItems');
     const index = this.getTaskIndex(task.id);
