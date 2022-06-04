@@ -57,8 +57,13 @@ export const addedItemDiv = document.getElementById('added-items');*/
           this.addedItems[i].index -= 1;
         }
         this.setData();
-      };
-      
+    };
+    updateDescription = (description, task) => {
+        task.description = description;
+        this.setData();
+    };
+    
+
 };
 
 form.addEventListener('submit', addTasks);
