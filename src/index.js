@@ -4,6 +4,8 @@ import MyTasks from './modules/forTask.js';
 const formAddItems = document.getElementById('formAddItems');
 const addDescription = document.getElementById('toAdd');
 const listTitle = document.getElementById('listTitle');
+const clearTask = document.getElementById('clearTask');
+
 let dataCount = 0;
 const getStorage = localStorage.getItem('dataCount');
 if (getStorage) {
@@ -28,7 +30,7 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
   const description = document.getElementById(`input${newTask.id}`);
   const checkbox = document.getElementById(`checkbox${newTask.id}`);
   const removeButton = document.getElementById(`button${newTask.id}`);
-  addDescription.value = '';
+  if (newTask.isCompleted) list.checkTask(newTask.id);
 
   // event listeners:
   removeButton.addEventListener('click', () => {
@@ -37,8 +39,15 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
   description.addEventListener('input', () => {
     eachList.updateDescription(description.value, newTask);
   });
+  description.addEventListener('click', () => {
+    eachList.selectTask(newTask);
+  });
+  description.addEventListener('keydown', () => {
+    eachList.selectTask(newTask);
+  });
   checkbox.addEventListener('change', () => {
     eachList.updateCheckbox(newTask);
+    eachList.checkTask(newTask.id);
   });
 }
 
