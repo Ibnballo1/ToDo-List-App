@@ -26,18 +26,18 @@ body {
 }
 
 #eachList {
-    position: absolute;
-    top: 12vh;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    padding-top: 12px;
-    width: 90%;
-    max-width: 750px;
-    min-width: 350px;
-    margin-bottom: 15%;
-    background-color: rgb(49, 47, 43);
-    box-shadow: 7px 5px 5px black;
+  position: absolute;
+  top: 12vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 12px;
+  width: 90%;
+  max-width: 750px;
+  min-width: 350px;
+  margin-bottom: 15%;
+  background-color: rgb(49, 47, 43);
+  box-shadow: 7px 5px 5px black;
 }
 
 .section {
