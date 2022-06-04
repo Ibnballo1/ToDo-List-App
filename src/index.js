@@ -10,7 +10,7 @@ if (getStorage) {
     dataCount = getStorage;
 }
 
-const eachList = new List(dataCount);
+const eachList = new MyTasks(dataCount);
 eachList.addedItems = eachList.getData();
 
 if (localStorage.getItem('listName')) {
