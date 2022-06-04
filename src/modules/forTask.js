@@ -47,6 +47,18 @@ export const addedItemDiv = document.getElementById('added-items');*/
         li.append(checkbox, input, button);
         ul.append(li);
     };
+    removeEachTask = (task) => {
+        const ul = document.getElementById('addedItems');
+        const index = this.getTaskIndex(task.id);
+        const li = document.getElementById(`li${task.id}`);
+        this.addedItems.splice(index, 1);
+        ul.removeChild(li);
+        for (let i = index; i < this.addedItems.length; i += 1) {
+          this.addedItems[i].index -= 1;
+        }
+        this.setData();
+      };
+      
 };
 
 form.addEventListener('submit', addTasks);
