@@ -64,7 +64,8 @@ formAddItems.addEventListener('submit', () => {
   });
   description.addEventListener('input', () => {
     eachList.updateDescription(description.value, newTask);
-  });description.addEventListener('click', () => {
+  });
+  description.addEventListener('click', () => {
     eachList.selectTask(newTask);
   });
   description.addEventListener('keydown', () => {
@@ -84,6 +85,6 @@ clearTask.addEventListener('click', () => {
 listTitle.addEventListener('click', () => {
   eachList.removeHighlight();
 });
-addTask.addEventListener('click', () => {
+formAddItems.addEventListener('click', () => {
   eachList.removeHighlight();
 });

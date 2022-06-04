@@ -53,16 +53,16 @@ class MyTasks {
   };
 
   removeDiv = (task) => {
-    const ul = document.getElementById('tasks');
+    const ul = document.getElementById('addedItems');
     const index = this.getTaskIndex(task.id);
     const li = document.getElementById(`li${task.id}`);
     ul.removeChild(li);
-    for (let i = index; i < this.tasks.length; i += 1) {
-      this.tasks[i].index -= 1;
+    for (let i = index; i < this.addedItems.length; i += 1) {
+      this.addedItems[i].index -= 1;
     }
   };
 
-  clearCompleted = (task) => {
+  clearTask = (task) => {
     if (task.isCompleted === true) {
       this.removeDiv(task);
       return false;
@@ -70,13 +70,12 @@ class MyTasks {
     return true;
   };
 
-  highlightTask = (task) => {
+  selectTask = (task) => {
     this.removeHighlight();
     const input = document.getElementById(`input${task.id}`);
     const removeButton = document.getElementById(`button${task.id}`);
     const drag = document.getElementById(`drag${task.id}`);
     input.classList.add('highlight');
-    drag.classList.add('hidden');
     removeButton.classList.remove('hidden');
   };
 
@@ -84,10 +83,8 @@ class MyTasks {
     const id = this.findHighlight();
     if (id >= 0) {
       const input = document.getElementById(`input${id}`);
-      //const drag = document.getElementById(`drag${id}`);
       const removeButton = document.getElementById(`button${id}`);
       input.classList.remove('highlight');
-      //drag.classList.remove('hidden');
       removeButton.classList.add('hidden');
     }
   };
