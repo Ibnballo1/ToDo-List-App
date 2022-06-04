@@ -15,6 +15,15 @@ export const addedItemDiv = document.getElementById('added-items');*/
         this.addedItems = [];
         this.taskIndex = Number(taskIndex);
     }
+
+    formAddItems = (description, index, isCompleted) => {
+        const newTask = {
+            description: description ?? 'description',
+            isCompleted: isCompleted ?? false,
+            index: index ?? this.addedItems.length,
+            id: this.taskIndex,
+        }
+    }
 };
 
 form.addEventListener('submit', addTasks);
