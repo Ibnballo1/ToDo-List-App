@@ -9,25 +9,23 @@
 <body>
     <main class="main">
         <h1 class="title">ToDo List App</h1>
-        <section class="section">
-            <div class="container">
-                <div class="todo-today">
-                    <input type="text" id="listTitle" class="sub-title" value="Today's To Do">
-                    <button id="refresh" type="button"><i class="fas fa-sync"></i></button>
-                </div>
-                <form id="formAddItems" action="#" class="add-items">
-                    <input id="toAdd" type="text" class="add-list" placeholder="Add to your list">
-                    <button id="add" type="button"><i class="fas fa-pen"></i></button>
-                </form>
+        <section id="eachList" class="section">
+            <div id="title" class="todo-today">
+                <input type="text" id="listTitle" class="sub-title" value="Today's To Do">
+                <button id="refresh" type="button"><i class="fas fa-sync"></i></button>
+            </div>
+            <form id="formAddItems" action="#" class="add-items">
+                <input id="toAdd" type="text" class="add-list" placeholder="Add to your list" required>
+                <button id="addButton" type="submit">enter<!--<i class="fas fa-pen">--></i></button>
+            </form>
 
-                <!-- Items will be added here -->
-                <ul id="addedItems" class="added-items">
-                    <!-- JAVASCRIPT FILES WILL BE ADDED -->
-                </ul>
+            <!-- Items will be added here -->
+            <ul id="addedItems" class="added-items">
+                <!-- JAVASCRIPT FILES WILL BE ADDED -->
+            </ul>
 
-                <div class="completed">
-                    <p class="clear-all">Clear all completed</p>
-                </div>
+            <div class="completed">
+                <button type="button" class="clear-all">Clear all completed</button>
             </div>
         </section>
     </main>
