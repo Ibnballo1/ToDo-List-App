@@ -3,7 +3,7 @@ class MyTasks {
     this.addedItems = [];
     this.taskIndex = Number(taskIndex);
   }
-  
+
   formAddItems = (description, index, isCompleted) => {
     const newTask = {
       description: description ?? 'description',
@@ -24,14 +24,17 @@ class MyTasks {
     const checkbox = document.createElement('INPUT');
     const input = document.createElement('INPUT');
     const button = document.createElement('button');
-    button.innerHTML = `<i class='fa fa-trash' aria-hidden='true'></i>`;
+    const trash = document.createElement('i');
     li.setAttribute('id', `li${task.id}`);
     checkbox.setAttribute('id', `checkbox${task.id}`);
     input.setAttribute('id', `input${task.id}`);
     button.setAttribute('id', `button${task.id}`);
     checkbox.setAttribute('type', 'checkbox');
     input.setAttribute('type', 'text');
+    trash.classList.add('fa', 'fa-trash');
+    trash.setAttribute('aria-hidden', 'true');
     checkbox.checked = task.isCompleted;
+    button.appendChild(trash);
     input.value = task.description;
     li.append(checkbox, input, button);
     ul.append(li);
