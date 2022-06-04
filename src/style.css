@@ -35,9 +35,9 @@ body {
   background-color: #fff;
 }
 
+li button,
 .todo-today button,
 .add-items button,
-li button,
 .completed button {
   border: none;
   background-color: #fff;
