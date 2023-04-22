@@ -1,5 +1,16 @@
-# ToDo List Structure Project
-In this project I built a simple todo list structure, which will be used as a starting point for other projects.
+# ToDo List App
+<p>Create the to-do List project with webpack. Ultimately, the user should be able to add an item and delete the item</p>
+
+# ToDo List Screenshot
+<div>
+  <p>Desktop Version</p>
+  <img src='https://github.com/Ibnballo1/ToDo-List-App/blob/e80d9eb16f3a7168ee10f8b9d444f659813cbc36/screenshot/desktop.png' alt='Todo List Screenshot'>
+  <br />
+  <p>Mobile version</p>
+  <div>
+    <img src='https://github.com/Ibnballo1/ToDo-List-App/blob/e80d9eb16f3a7168ee10f8b9d444f659813cbc36/screenshot/mobile.png' alt='Mobile screenshot' />
+  </div>
+</div>
 
 # Built With
 * Major Languages
