@@ -25,6 +25,7 @@ class MyTasks {
     const input = document.createElement('INPUT');
     const button = document.createElement('button');
     const trash = document.createElement('i');
+    li.classList.add('flex-box', 'sp-btw')
     li.setAttribute('id', `li${task.id}`);
     checkbox.setAttribute('id', `checkbox${task.id}`);
     input.setAttribute('id', `input${task.id}`);

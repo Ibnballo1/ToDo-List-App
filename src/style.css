@@ -9,9 +9,12 @@ body {
   background-color: bisque;
 }
 
-.main {
+.flex-box {
   display: flex;
   flex-direction: column;
+}
+
+.main {
   align-items: center;
   margin-top: 100px;
 }
@@ -28,8 +31,6 @@ body {
 #eachList {
   position: absolute;
   top: 12vh;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
   padding-top: 12px;
   width: 90%;
@@ -44,20 +45,19 @@ body {
   width: 65%;
 }
 
-.todo-today,
-.add-items,
-.completed,
-.added-items {
-  display: flex;
+.each-task,
+.sp-btw {
+  flex-direction: row;
   justify-content: space-between;
+}
+
+.bg-white {
   padding: 16px 10px;
   background-color: #fff;
 }
 
 li button,
-.todo-today button,
-.add-items button,
-.completed button {
+.bg-white button {
   border: none;
   background-color: #fff;
   color: grey;
@@ -84,15 +84,11 @@ li input[type='text'] {
 
 /* Added Item Style */
 .added-items {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
 li {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -107,8 +103,6 @@ li input[type='text']:hover {
 
 .each-task {
   padding: 12px 10px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .inputs {
