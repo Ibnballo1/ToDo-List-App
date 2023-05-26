@@ -9,9 +9,7 @@ body {
   background-color: bisque;
 }
 
-.main,
-#eachList,
-.added-items {
+.flex-box {
   display: flex;
   flex-direction: column;
 }
@@ -47,28 +45,19 @@ body {
   width: 65%;
 }
 
-.todo-today,
-.add-items,
-.completed,
-.added-items,
-li,
-.each-task {
-  display: flex;
+.each-task,
+.sp-btw {
+  flex-direction: row;
   justify-content: space-between;
 }
 
-.todo-today,
-.add-items,
-.completed,
-.added-items {
+.bg-white {
   padding: 16px 10px;
   background-color: #fff;
 }
 
 li button,
-.todo-today button,
-.add-items button,
-.completed button {
+.bg-white button {
   border: none;
   background-color: #fff;
   color: grey;
