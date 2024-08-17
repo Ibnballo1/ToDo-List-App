@@ -7,24 +7,24 @@
     <script src="https://kit.fontawesome.com/210152c720.js" crossorigin="anonymous"></script>
 <script defer src="main.js"></script></head>
 <body>
-    <main class="main">
+    <main class="main flex-box">
         <h1 class="title">ToDo List App</h1>
-        <section id="eachList" class="section">
-            <div id="title" class="todo-today">
+        <section id="eachList" class="section flex-box">
+            <div id="title" class="todo-today flex-box sp-btw bg-white">
                 <input type="text" id="listTitle" class="sub-title" value="Today's To Do">
                 <button id="refresh" type="button"><i class="fas fa-sync"></i></button>
             </div>
-            <form id="formAddItems" action="#" class="add-items">
+            <form id="formAddItems" action="#" class="add-items flex-box sp-btw bg-white">
                 <input id="toAdd" type="text" class="add-list" placeholder="Add to your list" required>
                 <button id="addButton" type="submit"><i class="fas fa-pen"></i></button>
             </form>
 
             <!-- Items will be added here -->
-            <ul id="addedItems" class="added-items">
+            <ul id="addedItems" class="added-items flex-box bg-white">
                 <!-- JAVASCRIPT FILES WILL BE ADDED -->
             </ul>
 
-            <div class="completed">
+            <div class="completed flex-box sp-btw bg-white">
                 <button type="button" id="clearTask" class="clear-all">Clear all completed</button>
             </div>
         </section>
