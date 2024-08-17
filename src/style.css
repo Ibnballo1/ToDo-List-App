@@ -6,131 +6,26 @@
 }
 
 body {
-  background-color: bisque;
-}
-
-.flex-box {
   display: flex;
-  flex-direction: column;
-}
-
-.main {
+  justify-content: center;
   align-items: center;
-  margin-top: 100px;
-}
-
-.title {
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.hidden {
-  display: none;
-}
-
-#eachList {
-  position: absolute;
-  top: 12vh;
-  padding: 20px;
-  padding-top: 12px;
-  width: 90%;
-  max-width: 750px;
-  min-width: 350px;
-  margin-bottom: 15%;
-  background-color: rgb(49, 47, 43);
-  box-shadow: 7px 5px 5px black;
-}
-
-.section {
-  width: 65%;
-}
-
-.each-task,
-.sp-btw {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.bg-white {
-  padding: 16px 10px;
-  background-color: #fff;
-}
-
-li button,
-.bg-white button {
-  border: none;
-  background-color: #fff;
-  color: grey;
-  cursor: pointer;
-  padding: 6px;
-}
-
-.add-items button {
-  border: 1px solid brown;
-  border-radius: 2px;
-  background-color: bisque;
-}
-
-.add-items input,
-li input[type='text'] {
-  border: 1px solid #000;
-  border-radius: 2px;
-  width: 95%;
-  height: 24px;
-  font-style: italic;
+  background-color: #eee;
+  font-family: sans-serif;
   font-size: 16px;
-  padding: 6px;
+  color: #333;
 }
 
-/* Added Item Style */
-.added-items {
-  justify-content: center;
+h1.title {
+  position: absolute;
+  top: 0;
+  font-size: 8rem;
+  opacity: 0.05;
+  transform: rotate(-5deg);
+  z-index: -1;
 }
 
-li {
-  list-style: none;
-  align-items: center;
-}
-
-li input[type='text'] {
-  border: none;
-  width: 92%;
-}
-
-li input[type='text']:hover {
-  border: 1px solid #000;
-}
-
-.each-task {
-  padding: 12px 10px;
-}
-
-.inputs {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-}
-
-input[type="checkbox"] {
-  border: 3px solid gray;
-}
-
-.each-task button {
-  font-size: 18px;
-}
-
-.completed {
-  background-color: #f6f6f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.clear-all {
-  font-family: 'Poppins', sans-serif;
-}
-
-.clear-all:hover {
-  color: grey;
-  text-decoration: underline;
-  cursor: pointer;
+@media screen and (min-width: 768px) {
+  h1.title {
+    font-size: 10rem;
+  }
 }
