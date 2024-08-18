@@ -5,27 +5,109 @@
   margin: 0;
 }
 
-body {
+.flex-box {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #eee;
+}
+
+body {
+  background-color: #ffe4c4;
   font-family: sans-serif;
   font-size: 16px;
-  color: #333;
+  align-items: center;
+  color: #8b0000;
+  height: 100vh;
 }
 
 h1.title {
   position: absolute;
-  top: 0;
-  font-size: 8rem;
+  top: 50px;
+  font-size: 7.5rem;
   opacity: 0.05;
   transform: rotate(-5deg);
   z-index: -1;
 }
 
+main {
+  outline: 1px solid #fff;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0.5rem 0 0;
+  flex-direction: column;
+  box-shadow:  0px 0px 4px 4px rgba(64,99,99,1);
+  width: 80%;
+}
+
+.todo-today {
+  padding: 0 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-today h4 {
+  color: #2f4f2f;
+}
+
+.todo-today button {
+  padding: 0 0.5rem 0 0;
+}
+
+.todo-today button,
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.todo-today button i {
+  color: #2f4f2f;
+  font-size: 15px;
+}
+
+form {
+  border-top: 1px solid rgb(248, 243, 243);
+  border-bottom: 1px solid rgb(248, 243, 243);
+  justify-content: space-between;
+  margin: 14px 0 0;
+  padding: 0 0.5rem;
+}
+
+.add-list {
+  border: none;
+  padding: 12px 10px;
+  outline: none;
+  width: 90%;
+  font-style: italic;
+}
+
+.add-list:active {
+  background-color: #fff;
+}
+
+.fa-circle-plus {
+  color: #2f4f2f;
+  font-size: 1.25rem;
+}
+
+.completed {
+  background-color: #ffe4c4;
+}
+
+.clear-all {
+  height: 40px;
+  background-color: #ffe4c4;
+  font-size: 1rem;
+  color: #2f4f2f;
+}
+
+
 @media screen and (min-width: 768px) {
   h1.title {
     font-size: 10rem;
+  }
+
+  main {
+    width: 30%;
   }
 }
