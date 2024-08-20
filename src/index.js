@@ -3,25 +3,17 @@ import MyTasks from './modules/forTask.js';
 
 const formAddItems = document.getElementById('formAddItems');
 const addDescription = document.getElementById('toAdd');
-const listTitle = document.getElementById('listTitle');
 const clearTask = document.getElementById('clearTask');
 
 let dataCount = 0;
 const getStorage = localStorage.getItem('dataCount');
+
 if (getStorage) {
   dataCount = getStorage;
 }
-
 const eachList = new MyTasks(dataCount);
+
 eachList.addedItems = eachList.getData();
-
-if (localStorage.getItem('listName')) {
-  listTitle.value = localStorage.getItem('listName');
-}
-
-listTitle.addEventListener('input', () => {
-  eachList.setListName(listTitle.value);
-});
 
 // Populating the data
 for (let i = 0; i < eachList.addedItems.length; i += 1) {
@@ -51,13 +43,14 @@ for (let i = 0; i < eachList.addedItems.length; i += 1) {
   });
 }
 
-formAddItems.addEventListener('submit', () => {
+formAddItems.addEventListener('submit', (e) => {
   const newTask = eachList.formAddItems(addDescription.value);
+  
   eachList.addLiTag(eachList.addedItems[eachList.addedItems.length - 1]);
   const description = document.getElementById(`input${eachList.taskIndex - 1}`);
   const checkbox = document.getElementById(`checkbox${eachList.taskIndex - 1}`);
   const removeButton = document.getElementById(`button${eachList.taskIndex - 1}`);
-  addDescription.value = '';
+
   // event listeners:
   removeButton.addEventListener('click', () => {
     eachList.removeEachTask(newTask);
@@ -75,6 +68,8 @@ formAddItems.addEventListener('submit', () => {
     eachList.updateCheckbox(newTask);
     eachList.checkTask(newTask.id);
   });
+  addDescription.value = '';
+  e.preventDefault();
 });
 
 clearTask.addEventListener('click', () => {
@@ -82,9 +77,6 @@ clearTask.addEventListener('click', () => {
   eachList.setData();
 });
 
-listTitle.addEventListener('click', () => {
-  eachList.removeHighlight();
-});
-formAddItems.addEventListener('click', () => {
-  eachList.removeHighlight();
-});
+// formAddItems.addEventListener('click', () => {
+//   eachList.removeHighlight();
+// });

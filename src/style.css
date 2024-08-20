@@ -70,12 +70,14 @@ form {
   border-bottom: 1px solid rgb(248, 243, 243);
   justify-content: space-between;
   margin: 14px 0 0;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0 0;
 }
 
 .add-list {
   border: none;
+  border-radius: 3px;
   padding: 12px 10px;
+  margin-right: 10px;
   outline: none;
   width: 90%;
   font-style: italic;
@@ -90,6 +92,16 @@ form {
   font-size: 1.25rem;
 }
 
+#addedItems {
+  border: 1px solid red;
+  flex-direction: column;
+}
+
+.added-items li {
+  background-color: #8b0000;
+  justify-content: space-between;
+}
+
 .completed {
   background-color: #ffe4c4;
 }
@@ -99,6 +111,10 @@ form {
   background-color: #ffe4c4;
   font-size: 1rem;
   color: #2f4f2f;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 

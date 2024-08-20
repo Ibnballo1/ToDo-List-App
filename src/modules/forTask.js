@@ -1,3 +1,5 @@
+import { each } from "lodash";
+
 class MyTasks {
   constructor(taskIndex) {
     this.addedItems = [];
@@ -123,6 +125,7 @@ class MyTasks {
   };
 
   getData = () => {
+    console.log('I am in getData');
     const getStoredVal = localStorage.getItem('dataTasks');
     if (getStoredVal) {
       return JSON.parse(getStoredVal);
