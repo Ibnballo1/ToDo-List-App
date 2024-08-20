@@ -114,8 +114,10 @@ class MyTasks {
 
   checkTask = (id) => {
     const description = document.getElementById(`input${id}`);
+    const removeButton = document.getElementById(`button${id}`);
     description.toggleAttribute('disabled');
     description.classList.toggle('done');
+    removeButton.classList.toggle('hide');
   };
 
   // local storage
@@ -125,7 +127,6 @@ class MyTasks {
   };
 
   getData = () => {
-    console.log('I am in getData');
     const getStoredVal = localStorage.getItem('dataTasks');
     if (getStoredVal) {
       return JSON.parse(getStoredVal);

@@ -93,13 +93,31 @@ form {
 }
 
 #addedItems {
-  border: 1px solid red;
   flex-direction: column;
+  padding: 0.5rem;
 }
 
 .added-items li {
-  background-color: #8b0000;
+  border-bottom: 2px solid #f8f3f3;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.added-items li input[type="text"] {
+  width: 90%;
+  padding: 12px 10px;
+  outline: none;
+  border: none;
+}
+
+.fa-trash {
+  color: #8b0000;
+  font-size: 1rem;
+}
+
+.hide {
+  display: none;
 }
 
 .completed {
