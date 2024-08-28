@@ -112,8 +112,10 @@ class MyTasks {
 
   checkTask = (id) => {
     const description = document.getElementById(`input${id}`);
+    const removeButton = document.getElementById(`button${id}`);
     description.toggleAttribute('disabled');
     description.classList.toggle('done');
+    removeButton.classList.toggle('hide');
   };
 
   // local storage
