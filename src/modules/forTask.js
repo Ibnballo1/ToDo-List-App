@@ -1,5 +1,3 @@
-import { each } from "lodash";
-
 class MyTasks {
   constructor(taskIndex) {
     this.addedItems = [];

@@ -77,6 +77,6 @@ clearTask.addEventListener('click', () => {
   eachList.setData();
 });
 
-// formAddItems.addEventListener('click', () => {
-//   eachList.removeHighlight();
-// });
+formAddItems.addEventListener('click', () => {
+  eachList.removeHighlight();
+});
